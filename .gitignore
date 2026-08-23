@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pt
+*.pth
+data/seadronessee/
+data/work/
+data/_demo/
+data/dgta/
+data/_models/
+runs/
+*.zip
+.DS_Store

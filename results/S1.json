@@ -1,0 +1,73 @@
+{
+  "classes": [
+    "person",
+    "boat"
+  ],
+  "baseline": {
+    "mAP_50_95": 0.5356391739528845,
+    "mAP_50": 0.8496600967616237,
+    "AP_small_50_95": 0.07259178775098289,
+    "clutter@op_conf": {
+      "TP": 8739,
+      "FP": 5507,
+      "FN": 891,
+      "precision": 0.613435350273718,
+      "recall": 0.9074766355139244,
+      "fp_per_frame": 3.559793148028442
+    },
+    "precision@recall_0.8": {
+      "precision": 0.7917009038618743,
+      "recall": 0.8004153686395845,
+      "conf": 0.5842969468490562,
+      "fp_per_frame": 1.3109243697478992
+    },
+    "compute": {
+      "mean_tiles_processed": 28.96574014221073,
+      "mean_tile_reduction": 0.0
+    }
+  },
+  "adaptive": {
+    "mAP_50_95": 0.5266228538104694,
+    "mAP_50": 0.8416616021432461,
+    "AP_small_50_95": 0.05904910936628673,
+    "clutter@op_conf": {
+      "TP": 8502,
+      "FP": 4303,
+      "FN": 1128,
+      "precision": 0.6639593908628922,
+      "recall": 0.8828660436136154,
+      "fp_per_frame": 2.7815126050420167
+    },
+    "precision@recall_0.8": {
+      "precision": 0.8071346615207252,
+      "recall": 0.803530633437092,
+      "conf": 0.5431778182336433,
+      "fp_per_frame": 1.1952165481577246
+    },
+    "compute": {
+      "mean_tiles_processed": 4.736263736263736,
+      "mean_tile_reduction": 0.5137816665127589
+    }
+  },
+  "config": {
+    "weights": "runs/det/detector_best.pt",
+    "val_coco_json": "data/seadronessee/annotations/instances_val.json",
+    "images_dir": "data/seadronessee/images/val",
+    "saliency_dir": "data/seadronessee/saliency_sar/val",
+    "scheme": "binary",
+    "tile": 640,
+    "overlap": 0.2,
+    "conf": 0.25,
+    "imgsz": 640,
+    "keep_thr": 0.05,
+    "gate_alpha": 0.0,
+    "gate_mode": "mult",
+    "gate_floor": 0.1,
+    "use_altitude": true,
+    "use_saliency_select": true,
+    "target_recall": 0.8,
+    "device": null,
+    "limit": 0,
+    "out": "results/S1.json"
+  }
+}
