@@ -1,0 +1,13 @@
+# Detector + tiling (PyTorch DLC provides torch)
+ultralytics>=8.3.0
+opencv-python-headless>=4.9
+numpy>=1.24
+
+# Saliency generation (data/gen_saliency.py) — TensorFlow/Keras 3.
+# Only needed when running MSI-Net to generate saliency PNGs; the detector
+# training/eval do not import TF. Install in the saliency step's environment.
+# tensorflow>=2.16
+# keras>=3.4
+
+# Optional: official COCO mAP cross-check
+# pycocotools>=2.0.7
