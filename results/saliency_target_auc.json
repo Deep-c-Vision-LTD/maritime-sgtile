@@ -1,1 +1,92 @@
-{"n_frames": 1547}
+{
+  "n_frames": 1547,
+  "definition": {
+    "tile_score": "mean saliency inside the tile (tiling/geometry.tile_saliency_scores)",
+    "tile_label": "1 if a ground-truth box centre lies inside the tile",
+    "selection": "keep tiles with score/frame-max >= tau, at least one kept (Eq. 3)",
+    "retention": "fraction of annotated targets whose centre lies in a kept tile",
+    "discarded": "1 - kept tiles / candidate tiles, pooled over frames"
+  },
+  "results": {
+    "generic/fixed640": {
+      "n_tiles": 44810,
+      "n_targets": 9630,
+      "pos_rate": 0.1825708547199286,
+      "roc_auc": 0.927822623826899,
+      "tau0.05": {
+        "target_retention": 0.9905503634475598,
+        "tiles_discarded_pooled": 0.5009149743360857,
+        "tiles_discarded_mean_frame": 0.43032886231415646,
+        "mean_tiles_kept": 14.456367162249515,
+        "mean_tiles_candidate": 28.96574014221073
+      },
+      "tau0.15": {
+        "target_retention": 0.9681204569055036,
+        "tiles_discarded_pooled": 0.6953581789779066,
+        "tiles_discarded_mean_frame": 0.6095399698340874,
+        "mean_tiles_kept": 8.824175824175825,
+        "mean_tiles_candidate": 28.96574014221073
+      }
+    },
+    "generic/altitude": {
+      "n_tiles": 22394,
+      "n_targets": 9630,
+      "pos_rate": 0.3086987585960525,
+      "roc_auc": 0.876138398905111,
+      "tau0.05": {
+        "target_retention": 0.9975077881619938,
+        "tiles_discarded_pooled": 0.30231311958560325,
+        "tiles_discarded_mean_frame": 0.16453299268425314,
+        "mean_tiles_kept": 10.099547511312217,
+        "mean_tiles_candidate": 14.475759534583064
+      },
+      "tau0.15": {
+        "target_retention": 0.987435098650052,
+        "tiles_discarded_pooled": 0.5096900955613111,
+        "tiles_discarded_mean_frame": 0.34367464934691827,
+        "mean_tiles_kept": 7.097608274078862,
+        "mean_tiles_candidate": 14.475759534583064
+      }
+    },
+    "xsoyelnet/fixed640": {
+      "n_tiles": 44810,
+      "n_targets": 9630,
+      "pos_rate": 0.1825708547199286,
+      "roc_auc": 0.9695804436553416,
+      "tau0.05": {
+        "target_retention": 0.960643821391485,
+        "tiles_discarded_pooled": 0.8062486052220487,
+        "tiles_discarded_mean_frame": 0.7287357250592545,
+        "mean_tiles_kept": 5.6121525533290235,
+        "mean_tiles_candidate": 28.96574014221073
+      },
+      "tau0.15": {
+        "target_retention": 0.8849428868120457,
+        "tiles_discarded_pooled": 0.8473555010042402,
+        "tiles_discarded_mean_frame": 0.7870340443869855,
+        "mean_tiles_kept": 4.421460892049128,
+        "mean_tiles_candidate": 28.96574014221073
+      }
+    },
+    "xsoyelnet/altitude": {
+      "n_tiles": 22394,
+      "n_targets": 9630,
+      "pos_rate": 0.3086987585960525,
+      "roc_auc": 0.9755773008472527,
+      "tau0.05": {
+        "target_retention": 0.9880581516095535,
+        "tiles_discarded_pooled": 0.6728141466464231,
+        "tiles_discarded_mean_frame": 0.513781666512759,
+        "mean_tiles_kept": 4.736263736263736,
+        "mean_tiles_candidate": 14.475759534583064
+      },
+      "tau0.15": {
+        "target_retention": 0.9445482866043614,
+        "tiles_discarded_pooled": 0.7290345628293293,
+        "tiles_discarded_mean_frame": 0.5943385046326222,
+        "mean_tiles_kept": 3.9224305106658046,
+        "mean_tiles_candidate": 14.475759534583064
+      }
+    }
+  }
+}
