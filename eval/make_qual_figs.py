@@ -1,8 +1,8 @@
 """
 Qualitative figures for the GRSL revision (reviewers 2 and 3).
 
-Fig A  generic MSI-Net vs fine-tuned xSoyel-Net saliency on the same frames.
-Fig B  which tiles the xSoyel-Net prior keeps vs drops (empty-water rejection).
+Fig A  generic MSI-Net vs fine-tuned xSoyelNet saliency on the same frames.
+Fig B  which tiles the xSoyelNet prior keeps vs drops (empty-water rejection).
 
 Both are built entirely from cached saliency maps + the project's own tiling
 functions, so they reproduce the exact selection the pipeline uses.
@@ -19,7 +19,7 @@ from tiling.geometry import (generate_tiles, altitude_tile_size,
 ROOT = "data/seadronessee"
 IMG = f"{ROOT}/images/val"
 SAL_GEN = f"{ROOT}/saliency/val"       # generic MSI-Net
-SAL_FT  = f"{ROOT}/saliency_sar/val"   # fine-tuned xSoyel-Net
+SAL_FT  = f"{ROOT}/saliency_sar/val"   # fine-tuned xSoyelNet
 OUT = "paper/figs"; os.makedirs(OUT, exist_ok=True)
 EX = ["276.jpg", "300.jpg", "189.jpg"]   # high-altitude, small targets on water
 
@@ -50,7 +50,7 @@ for r, fn in enumerate(EX):
     alt = (meta[fn].get("meta") or {}).get("altitude", 0)
     ax[r,0].set_ylabel(f"{stem}  ({alt:.0f} m)", fontsize=9)
     for c in range(3): ax[r,c].set_xticks([]); ax[r,c].set_yticks([])
-for c,t in enumerate(["frame + targets (cyan)", "generic MSI-Net", "xSoyel-Net (fine-tuned)"]):
+for c,t in enumerate(["frame + targets (cyan)", "generic MSI-Net", "xSoyelNet (fine-tuned)"]):
     ax[0,c].set_title(t, fontsize=10)
 fig.tight_layout(); fig.savefig(f"{OUT}/qual_saliency.png", dpi=200, bbox_inches="tight")
 print("saved qual_saliency.png")
