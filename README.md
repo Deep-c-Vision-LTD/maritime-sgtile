@@ -4,7 +4,7 @@ Code and results for:
 
 > Hamit Soyel. **Altitude- and Saliency-Guided Adaptive Tiling for Efficient Small-Object
 > Detection in Maritime Search and Rescue.** IEEE Geoscience and Remote Sensing Letters
-> (under review).
+> (Early Access), 2026. DOI: [10.1109/LGRS.2026.3750731](https://doi.org/10.1109/LGRS.2026.3750731)
 
 ## The result in one paragraph
 
