@@ -28,7 +28,7 @@ scale term helps scale-flexible detectors and should be omitted for two-stage mo
 
 ## Figures
 
-- `figures/qual_saliency.png` generic MSI-Net vs fine-tuned xSoyelNet (paper Fig. 3).
+- `figures/qual_saliency.png` generic MSI-Net vs fine-tuned xSoyelNet (saliency figure in the paper).
 - `figures/qual_tiles.png` kept (green) vs dropped (red) tiles under saliency selection on
   three val frames; over the whole val split, 98.8% of targets are retained with a third of
   the candidate tiles (`results/saliency_target_auc.json`).
@@ -86,6 +86,20 @@ data/          SeaDronesSee conversion, tiling, saliency generation
 sm_eval.py, launch_*.py   SageMaker training and eval harness
 figures/       paper figures
 results/        pre-computed JSONs backing every number
+```
+
+## Citation
+
+```bibtex
+@article{soyel2026altitude,
+  author  = {Soyel, Hamit},
+  title   = {Altitude- and Saliency-Guided Adaptive Tiling for Efficient
+             Small-Object Detection in Maritime Search and Rescue},
+  journal = {IEEE Geoscience and Remote Sensing Letters},
+  year    = {2026},
+  doi     = {10.1109/LGRS.2026.3750731},
+  note    = {Early Access}
+}
 ```
 
 ## License / data
